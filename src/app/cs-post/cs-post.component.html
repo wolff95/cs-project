@@ -1,0 +1,12 @@
+<div class="post">
+  <div class="post-title">
+    <h1>{{postObj.title}}</h1>
+  </div>
+  <div *ngIf="postObj.preview" class="post-image">
+    <img class="img-thumbnail" src="{{postObj.preview.images[0].source.url}}"/>
+  </div>
+  <div class="post-footer">
+    <span class="left">{{postObj.ups}}</span>
+    <a class="right" [routerLink]="['/post', postObj.id]">More details...</a>
+  </div>
+</div>

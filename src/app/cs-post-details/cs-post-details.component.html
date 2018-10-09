@@ -1,0 +1,10 @@
+<div *ngIf="post" class="container">
+  <h1>
+    {{post.title}}
+  </h1>
+  <div *ngIf="post.preview" class="img-container">
+    <img src="{{post.preview.images[0].source.url}}"/>
+  </div>
+  <p>{{post.selftext}}</p>
+  <a routerLink="/posts">Back</a>
+</div>
